@@ -233,16 +233,49 @@ left: 0;
   }
       }
       
-      @media all and (min-width:1024px){
+      @media (min-width: 1024px) {
          .detail{
             .left{
                .info{
-                  h2{font-size:60px;}
-                  .sum{ font-size:25px;}
-               }
-               .info2{
-                  p{
-                  font-size:28px;}
+                  /* h2{font-size:35px;} */
+                  p.sum{
+                     text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 8; 
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  color:#BDBDBD;
+                  }
+           
+                        }
+                                 
+                        .detailbottom{ 
+     
+      h2{ font-size:20px }
+      }
+        
+   }
+      }
+   }
+      @media all and (min-width:767px) and (max-width: 1023px){
+         .detail{
+            .left{
+               .info{
+                  h2{font-size:35px;}
+                  p.sum{ font-size:20px;
+                     text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 8; 
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  color:#BDBDBD;
+                  }
+                  .info2{
+                     p{
+                        font-size:15px;}
+                     }
                }
             }
             }
@@ -251,19 +284,45 @@ left: 0;
                   
                }
             }
+
+            .detailbottom{
+            position:absolute; left:10px;
+     
+      h2{ font-size:20px }
+      img{
+         width:200px;
+         padding-right:50px;
+         height:200px;
+         
+       
+        
+      }
+         button{ 
+         }
+         .prevbtn{ position:absolute;left:10px;}
+         .nextbtn{position:absolute; right: 25%;}
+   }
       }
       
-      @media all and (min-width:480px) and (max-width: 767px){
+      @media all and (min-width:479px) and (max-width: 767px){
          .detail{
             .left{
                .info{
-                  h2{font-size:40px;}
-                  .sum{ font-size:20px;}
-               }
-               .info2{
-                  p{
-                  font-size:18px;}
-               }
+                  h2{font-size:30px;}
+                  p.sum{ font-size:15px;
+                  text-overflow: ellipsis;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 11; 
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  color:#BDBDBD;
+                  }
+                  .info2{
+                     p{
+                        font-size:15px;}
+                     }
+                  }
             }
             }
             .right {
@@ -271,20 +330,52 @@ left: 0;
                   
                }
             }
+
+         .detailbottom{
+            position:absolute; left:10px;
+     
+      h2{ font-size:20px }
+      img{
+         width:200px;
+         padding-right:20px;
+         height:200px;
+       
+        
+      }
+         button{ 
+         }
+         .prevbtn{ position:absolute;left:10px;}
+         .nextbtn{position:absolute; right: 40px;}
+   }
          }
       
       
       @media all and (max-width:479px){
+         .detailbottom{
+            position:absolute; left:10px;
+     
+      h2{ font-size:20px }
+      img{
+         width:200px;
+         height:200px;
+       
+        
+      }
+         button{ 
+         }
+         .prevbtn{ position:absolute;left:10px;}
+         .nextbtn{position:absolute; right: 40px;}
+   }
          .detail{
             .left{
                .info{
-                  h2{font-size:20px;}
-                  .sum{ font-size:12px;}
-               }
-               .info2{
-                  p{
-                  font-size:12px;}
-               }
+                  h2{font-size:25px;}
+                  p.sum{ font-size:12px; color:#BDBDBD;}
+                  .info2{
+                     p{
+                        font-size:15px;}
+                     }
+                  }
             }
             }
             .right {
@@ -294,5 +385,4 @@ left: 0;
             }
          }
       }
-
 `
