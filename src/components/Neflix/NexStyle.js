@@ -384,5 +384,39 @@ left: 0;
                }
             }
          }
+      @media all and (max-width:394px){
+         .detailbottom{
+            position:absolute; left:10px;
+     
+      h2{ font-size:20px }
+      img{
+         width:170px;
+         height:200px;
+       
+        
+      }
+         button{ 
+         }
+         .prevbtn{ position:absolute;left:10px;}
+         .nextbtn{position:absolute; right: 40px;}
+   }
+         .detail{
+            .left{
+               .info{
+                  h2{font-size:25px;}
+                  p.sum{ font-size:12px; color:#BDBDBD;}
+                  .info2{
+                     p{
+                        font-size:15px;}
+                     }
+                  }
+            }
+            }
+            .right {
+               img{
+                  
+               }
+            }
+         }
       }
 `
