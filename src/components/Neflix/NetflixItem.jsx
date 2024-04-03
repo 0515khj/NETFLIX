@@ -14,8 +14,8 @@ const NetflixItem = ({item}) => {
 
     const navigate = useNavigate();
 
-    const gogodetail = (img1) =>{
-        navigate(`/detail/${img1.id}`,{state:{imgdetail:img1}});
+   const gogodetail = (img1) =>{
+            navigate(`/detail/${img1.id}`,{state:{imgdetail:img1}});
     }
 
     const clickprev = () =>{
@@ -34,15 +34,10 @@ const NetflixItem = ({item}) => {
     const imgsize = 210;
     const marginLeft = -idx * imgsize;
 
-    /* const clickimg = () =>{
-        addEventListener('click',e=>{
-            e.target.classList.replace('','pop')
-        })
-    } */
 
     return (
         <NetflixItemWrap>
-            <div className="inner">
+          <div className="inner">
 
             <h2>{title}</h2>
 
@@ -50,7 +45,7 @@ const NetflixItem = ({item}) => {
 
             <div className="image" style={{marginLeft:marginLeft , width: img.length * imgsize}}>
             {
-                img.map((imags , index)=> (<img key={index} src={imags.imageUrl} alt="" onClick={()=>toggle(index)}/>))
+                img.map((imags , index)=> (<img key={index} src={imags.imageUrl} alt=""onClick={()=>toggle(index)}/>))
             }
             </div>
             <button onClick={clicknext} className='nextbtn'  ><VscChevronRight /></button>
@@ -77,7 +72,6 @@ const NetflixItem = ({item}) => {
                             <button onClick={()=>gogodetail(img[popupIdx])}>영화보기</button>
                             </div>
                             
-                            {/* <button onClick={()=>setPop(false)}>&times;</button> */}
                         </div>
                     </div>
                 )

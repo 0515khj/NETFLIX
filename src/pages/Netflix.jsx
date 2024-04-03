@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NetflixWrap } from './NetflixStyle';
 import netflixdata from '../assets/api/netflixdata';
 import NetflixList from '../components/Neflix/NetflixList';
@@ -8,10 +8,7 @@ const Netflix = () => {
 
     return (
         <NetflixWrap>
-
             
-
-
             <NetflixList data={data}/>
 
         </NetflixWrap>

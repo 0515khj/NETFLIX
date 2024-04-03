@@ -89,9 +89,6 @@ img{width:200px; height:200px;
       .popinfo{ margin-bottom:20px;}
       p{margin:0; font-size:1rem;}
       .popsinob{flex-grow:1; position: relative;
-         /* display: -webkit-box; 
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2 */;
            height:150px; overflow:hidden; text-overflow:ellipsis; 
          }
       }
@@ -110,58 +107,75 @@ img{width:200px; height:200px;
    z-index:99;
 }
 
-@media (max-width:728px) {
+
+
+@media all and (min-width:480px) and (max-width: 767px){
+         img {width:200px;}
+      .modal { width:430px;}
+         }
+@media all and (max-width:480px) {
       img {width:200px;}
       .modal { width:330px;}
-/* 
-      .popsinob{
+} 
 
-         button{
-            position:absolute; left: 0; bottom: -30px;
-         }
-      } */
-}
 
 `
 
 export const NetflixDetailWrap =styled.div`
-
-   .main {position: relative;
-            height: 100vh;
+  .main {position: relative;
+            width:100%;
+            height: 850px;
             background: #000;
             overflow:hidden;
+   }
+
+   .detailbottom{
+      position:absolute; top: 70%; left:100px;
+      width: 100%;
+      height: 250px;
+      overflow:hidden;
+      color:#fff;
+      z-index:100;
+      h2{font-size:30px; }
+      img{
+         padding:10px;
+         height:200px;
+         width:200px;
+         transition:0.5s;
+         margin-top: 10px;
+         cursor: pointer;
+         &:hover{
+            transform:scale(1.2);         }
+      }
+         button{ font-size:40px; border-radius:50%;
+            width:50px; height: 50px;
+            position:absolute; top: 60%;
+            transform:translate(0,-60%);
+            background: rgba(255,255,255,0.6);
+            z-index:100;
+            display:flex; align-items:center;
+            cursor: pointer;
+         }
+         .prevbtn{ position:absolute;left:10px;}
+         .nextbtn{position:absolute; right: 177px;}
    }
 
 
    .inner {
 height: 100%;
+overflow:hidden;
 display: flex; 
 position: relative;
   
 
       .detail{
          width: 100%;
-         height:auto;
+         height:100%;
          overflow:hidden;
-position: relative;
+         position: relative;
          .left{ 
-            .btn{
-               display:flex;
-               button{height:50px; width:100px; border-radius:8px;
-                  vertical-align:center;
-                  justify-content:center;
-                  align-items:center;
-                  display:flex;
-                  margin-left: 20px;
-                  font-size:15px;
-                  cursor: pointer;
-               }
-               .playbtn { &:hover { background: #000; color:#fff; border: 1px solid #fff;}}
-               .infobtn { background: #999; color:#fff; }
-
-            }
-            .info2{display:flex; margin-bottom:20px;
-            p {margin-right: 30px;}}
+            height:auto;
+            overflow:hidden;
             position: absolute; 
 width: 40%; 
 height: 100%; 
@@ -172,46 +186,113 @@ left: 0;
 padding: 20px;
 display: flex;
     flex-direction: column;
-           .info{ color: #fff; 
+    .info{ color: #fff; 
       text-align: left;
       margin:20px;
-              h2{ font-size:60px; font-weight:900; font-family:serif;
-               color:beige;margin-bottom:30%;
-               }
-               p{ line-height:1.5; font-size:20px;}
+      h2{ font-size:60px; font-weight:900; font-family:serif;
+         color:beige;margin-bottom:30%;
+      }
+      p{ line-height:1.5; }
+      p.sum{ margin-bottom:20px; font-size:20px;}
+      
+   }
+   .info .info2{display:flex; margin-bottom:20px;
+      p {margin-right: 30px; font-size:20px;}
+   }
+   .btn{
+      display:flex;
+      button{height:50px; width:100px; border-radius:8px;
+         vertical-align:center;
+         justify-content:center;
+         align-items:center;
+         display:flex;
+         margin-left: 20px;
+         font-size:15px;
+         cursor: pointer;
+      }
+      .playbtn { &:hover { background: #000; color:#fff; border: 1px solid #fff;}}
+      .infobtn { background: #999; color:#fff; }
 
-           }
-           .sum{ margin-bottom:20px;}
+   }
          }
          .right {
 width: 100%; 
-height: 100%; 
+height: auto; 
 position: absolute;
 top: 0;
 left: 0;
     z-index: 5;
     img {
       position:absolute; right: 0;
-      width: 55%;
-height:100%;
-      /* object-fit: cover;  */
+      width: 60%;
+      height:700px;
+      -webkit-mask-image : linear-gradient(to left, rgba(0,0,0,1) 50%),
+      rgba(0,0,0,0) 100%;
+      mask-image : linear-gradient(to left, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
     }
   }
       }
-   }
-   @media (max-width: 728px) {
-  .detail {
-    overflow: hidden;
-    height: auto; 
-  }
-  .right {
-   img{
-   }
-  }
-}
+      
+      @media all and (min-width:1024px){
+         .detail{
+            .left{
+               .info{
+                  h2{font-size:60px;}
+                  .sum{ font-size:25px;}
+               }
+               .info2{
+                  p{
+                  font-size:28px;}
+               }
+            }
+            }
+            .right {
+               img{
+                  
+               }
+            }
+      }
+      
+      @media all and (min-width:480px) and (max-width: 767px){
+         .detail{
+            .left{
+               .info{
+                  h2{font-size:40px;}
+                  .sum{ font-size:20px;}
+               }
+               .info2{
+                  p{
+                  font-size:18px;}
+               }
+            }
+            }
+            .right {
+               img{
+                  
+               }
+            }
+         }
+      
+      
+      @media all and (max-width:479px){
+         .detail{
+            .left{
+               .info{
+                  h2{font-size:20px;}
+                  .sum{ font-size:12px;}
+               }
+               .info2{
+                  p{
+                  font-size:12px;}
+               }
+            }
+            }
+            .right {
+               img{
+                  
+               }
+            }
+         }
+      }
 
-
-
-
-  
 `
