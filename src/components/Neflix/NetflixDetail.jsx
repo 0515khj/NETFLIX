@@ -5,6 +5,7 @@ import { FaPlay } from "react-icons/fa";
 import { IoMdInformationCircle } from "react-icons/io";
 import { VscChevronRight,VscChevronLeft  } from "react-icons/vsc";
 import netdetaildata from '../../assets/api/netdetaildata';
+import { Link } from "react-router-dom";
 
 
 
@@ -82,7 +83,7 @@ const NetflixDetail = () => {
 
                 <div className="image-slider"> 
                 {detaildata.img.slice(pro, pro + imageToShow).map((image, index) => 
-                ( <a href="/"><img key={index} src={image.imageUrl} alt="" /></a>))} 
+                ( <Link to="//"> <img key={index} src={image.imageUrl} alt="" /></Link>))} 
                 </div>
 
             <button className='nextbtn' onClick={nextclick}><VscChevronRight /></button>
