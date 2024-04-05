@@ -80,13 +80,9 @@ const NetflixDetail = () => {
 
             <button className='prevbtn' onClick={prevclick}><VscChevronLeft /></button>
 
-          {/*   {detaildata.img.map((image , index)=>(
-                <img key={index} src={image.imageUrl} alt="" />
-                ))} */}
-                
                 <div className="image-slider"> 
                 {detaildata.img.slice(pro, pro + imageToShow).map((image, index) => 
-                ( <img key={index} src={image.imageUrl} alt={image.filmTitle} /> ))} 
+                ( <a href="/"><img key={index} src={image.imageUrl} alt="" /></a>))} 
                 </div>
 
             <button className='nextbtn' onClick={nextclick}><VscChevronRight /></button>

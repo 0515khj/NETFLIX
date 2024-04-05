@@ -137,16 +137,19 @@ export const NetflixDetailWrap =styled.div`
       color:#fff;
       z-index:100;
       h2{font-size:30px; }
+      
       img{
          padding:10px;
          height:200px;
          width:200px;
          transition:0.5s;
          margin-top: 10px;
+         transition: 0.5s;
          cursor: pointer;
          &:hover{
             transform:scale(1.2);         }
       }
+
          button{ font-size:40px; border-radius:50%;
             width:50px; height: 50px;
             position:absolute; top: 60%;
