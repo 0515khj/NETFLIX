@@ -13,7 +13,6 @@ const NetflixDetail = () => {
     const [detaildata , setDetaildata] = useState(netdetaildata[0]);
     const [movieList, setMovieList] = useState([]);
     const [pro , setPro] = useState(0);
-    const [imageIndex, setImageIndex] = useState(0);
 
     const location = useLocation();
 

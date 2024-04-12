@@ -17,6 +17,20 @@ margin:auto;
 .main{height:80px;
     display:flex;
     align-items:center;
+    .middle {
+        position:absolute;top:10px; right:20px;
+    display:flex; justify-content:center;
+
+    li{list-style: none; margin-right:20px; 
+        a {
+    text-decoration: none; 
+            color:#fff;
+            &:hover{
+                color:red;
+            }
+          }
+        }
+}
 }
 .topleft {display:flex;
     .barbtn{
@@ -30,9 +44,12 @@ h1{
         width:100px; height:60px;
     }
 }
+
+
+
 }
 .topright{ display:flex;
-    position:absolute; right:30px;
+    position:absolute;top:50%; right:30px;
 
     button{
         background: none;

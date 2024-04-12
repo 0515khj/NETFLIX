@@ -124,13 +124,13 @@ img{width:200px; height:200px;
 export const NetflixDetailWrap =styled.div`
   .main {position: relative;
             width:100%;
-            height: 850px;
+            height: 950px;
             background: #000;
             overflow:hidden;
    }
 
    .detailbottom{
-      position:absolute; top: 70%; left:100px;
+      position:absolute; top: 70%; left:80px;
       width: 100%;
       height: 250px;
       overflow:hidden;
@@ -160,7 +160,7 @@ export const NetflixDetailWrap =styled.div`
             cursor: pointer;
          }
          .prevbtn{ position:absolute;left:10px;}
-         .nextbtn{position:absolute; right: 177px;}
+         .nextbtn{position:absolute; right: 130px;}
    }
 
 
@@ -367,7 +367,7 @@ left: 0;
          button{ 
          }
          .prevbtn{ position:absolute;left:10px;}
-         .nextbtn{position:absolute; right: 40px;}
+         .nextbtn{position:absolute; right: 45px;}
    }
          .detail{
             .left{
