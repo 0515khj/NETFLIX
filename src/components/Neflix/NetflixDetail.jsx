@@ -29,13 +29,14 @@ const NetflixDetail = () => {
     }
 
 
-    useEffect(() =>{
-        const  fetch = async () =>{
+    /* useEffect(() =>{
+        const fetch = async () =>{
             const data=[];
             setMovieList(data); 
         }
         fetch();
-    },[]);
+    },[]); */
+    
     const goclick=()=>{
         alert('영화 준비중...')
     }

@@ -91,4 +91,44 @@ h1{
     }
 }
 
+@media (min-width:768px)and (max-width: 1024px) {
+    
+}
+@media (min-width:479px)and (max-width: 768px) {
+    .topleft {
+h1{
+    img{
+        width:80px; height:50px;
+    }
+}}
+    .middle{
+        li{font-size:13px;}
+    }
+    .topright{
+            input{ width:110px;}
+            ul{ width:150px;
+            font-size:13px;
+                li{height:40px;}
+        }
+    }
+}
+@media all and (max-width:479px) {
+   .topleft {
+h1{
+    img{
+        width:80px; height:50px;
+    }
+}}
+    .middle{
+        li{font-size:13px;}
+    }
+    .topright{
+            input{ width:110px;}
+            ul{ width:150px;
+            font-size:13px;
+                li{height:40px;}
+        }
+    }
+}
+
 `

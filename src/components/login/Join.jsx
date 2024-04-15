@@ -40,16 +40,16 @@ const Join = () => {
     return (
         <JoinWrap>
             <div className="inner">
-            <h2>회원가입</h2>
+            <h2>JOIN</h2>
             <form onSubmit={onSubmit}>
                 <p>
                     <label> 이름 : </label>
                     <input type="text" name='username' ref={Ref} onChange={oninput} value={username} placeholder='name' />
                 </p>
-                <p>
+                {/* <p>
                     <label> 번호 : </label>
                     <input type="tel" name='tel'  onChange={oninput} value={tel} placeholder='tel' />
-                </p>
+                </p> */}
                 <p>
                     <label> 이메일 : </label>
                     <input type="email" name='email'  onChange={oninput} value={email} placeholder='aaa@naver.com' />
